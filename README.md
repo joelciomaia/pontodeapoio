@@ -37,3 +37,5 @@ No repositório do GitHub, ative:
 ## Bases de conteúdo
 
 O conteúdo inicial foi montado a partir dos PDFs fornecidos e de fontes oficiais/organizacionais como OVM/SC, Instituto Maria da Penha, CNJ, Ministério das Mulheres, Pacto Nacional Brasil Contra o Feminicídio, Justiceiras e Instituto Nós Por Elas.
+
+O site também inclui uma área de pesquisa com links para bases acadêmicas e fontes de estudo como SciELO, Biblioteca Virtual em Saúde, Portal de Periódicos CAPES, BDTD, OVM/SC e DataSenado/OMV.

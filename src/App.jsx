@@ -8,16 +8,20 @@ import {
   Database,
   ExternalLink,
   EyeOff,
+  FileText,
   Gavel,
+  GraduationCap,
   HandHeart,
   HeartPulse,
   Landmark,
   LifeBuoy,
+  LibraryBig,
   LockKeyhole,
   MapPinned,
   MessageCircle,
   PhoneCall,
   Scale,
+  Search,
   ShieldAlert,
   Siren,
   Stethoscope,
@@ -36,6 +40,7 @@ const navItems = [
   ['Lei', '#lei'],
   ['Rede', '#rede'],
   ['Dados SC', '#dados-sc'],
+  ['Pesquisa', '#pesquisa'],
   ['Contatos', '#contatos'],
 ]
 
@@ -124,31 +129,43 @@ const network = [
     icon: Siren,
     title: 'Policia Militar',
     detail: '190 para emergência e risco imediato.',
+    cta: 'Rede Catarina',
+    href: 'https://www.pm.sc.gov.br/paginas/rede-catarina',
   },
   {
     icon: Building2,
     title: 'Policia Civil e Delegacia da Mulher',
     detail: 'Registro de ocorrência, investigação e pedido de medidas protetivas.',
+    cta: 'PC por Elas',
+    href: 'https://pcporelas.pc.sc.gov.br/',
   },
   {
     icon: Gavel,
     title: 'Juizados e Tribunais de Justiça',
     detail: 'Análise e concessão de medidas protetivas de urgência.',
+    cta: 'TJSC CEAV',
+    href: 'https://www.tjsc.jus.br/ceav',
   },
   {
     icon: Scale,
     title: 'Defensoria Pública',
     detail: 'Orientação jurídica gratuita e apoio para requerer direitos.',
+    cta: 'DPE/SC',
+    href: 'https://defensoria.sc.def.br/',
   },
   {
     icon: Stethoscope,
     title: 'SUS e rede de saúde',
     detail: 'Atendimento médico, psicológico e cuidados em casos de violência sexual.',
+    cta: 'Saúde e cuidado',
+    href: 'https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais/2025/guia-pratico-de-cuidado-a-mulher-em-situacao-de-violencia.pdf',
   },
   {
     icon: LifeBuoy,
     title: 'Serviços de acolhimento',
     detail: 'Apoio psicossocial, abrigamento temporário e encaminhamentos.',
+    cta: 'Rede OVM/SC',
+    href: 'https://ovm.alesc.sc.gov.br/rede-de-enfrentamento/',
   },
 ]
 
@@ -237,6 +254,101 @@ const sources = [
   },
 ]
 
+const studyTopics = [
+  {
+    icon: Scale,
+    title: 'Lei e direitos',
+    text: 'Investigue a Lei Maria da Penha, medidas protetivas, acesso à justiça e atendimento humanizado.',
+    href: '#lei',
+  },
+  {
+    icon: HeartPulse,
+    title: 'Saúde e impactos',
+    text: 'Pesquise consequências físicas, psicológicas e sociais da violência doméstica e familiar.',
+    href: '#pesquisa',
+  },
+  {
+    icon: Database,
+    title: 'Dados e políticas públicas',
+    text: 'Compare estatísticas, relatórios, orçamento público e ações de prevenção em Santa Catarina e no Brasil.',
+    href: '#dados-sc',
+  },
+  {
+    icon: Users,
+    title: 'Rede de proteção',
+    text: 'Mapeie os órgãos de segurança, justiça, saúde, assistência social e sociedade civil.',
+    href: '#rede',
+  },
+]
+
+const researchHubs = [
+  {
+    icon: Search,
+    title: 'SciELO',
+    text: 'Biblioteca científica com artigos revisados por pares em português, espanhol e inglês.',
+    href: 'https://search.scielo.org/?q=%22viol%C3%AAncia%20contra%20a%20mulher%22',
+    cta: 'Pesquisar artigos',
+  },
+  {
+    icon: LibraryBig,
+    title: 'Biblioteca Virtual em Saúde',
+    text: 'Base útil para temas de saúde pública, violência, gênero, acolhimento e cuidado.',
+    href: 'https://pesquisa.bvsalud.org/portal/?lang=pt&q=%22viol%C3%AAncia%20contra%20a%20mulher%22',
+    cta: 'Acessar BVS',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Portal de Periódicos CAPES',
+    text: 'Ambiente amplo para localizar periódicos, livros, bases acadêmicas e produções científicas.',
+    href: 'https://www.periodicos.capes.gov.br/',
+    cta: 'Abrir CAPES',
+  },
+  {
+    icon: FileText,
+    title: 'BDTD',
+    text: 'Biblioteca Digital Brasileira de Teses e Dissertações para pesquisas acadêmicas aprofundadas.',
+    href: 'https://bdtd.ibict.br/vufind/Search/Results?lookfor=%22viol%C3%AAncia%20contra%20a%20mulher%22&type=AllFields',
+    cta: 'Ver teses',
+  },
+  {
+    icon: Database,
+    title: 'Publicações do OVM/SC',
+    text: 'Relatórios, estudos e publicações científicas sobre violência contra a mulher em Santa Catarina.',
+    href: 'https://ovm.alesc.sc.gov.br/publicacoes/dissertacoes-teses-e-publicacoes-cientificas/',
+    cta: 'Acessar OVM',
+  },
+  {
+    icon: BookOpen,
+    title: 'DataSenado e OMV',
+    text: 'Pesquisas nacionais sobre percepção, atendimento, violência doméstica e políticas públicas.',
+    href: 'https://www12.senado.leg.br/institucional/omv/pesquisanacional',
+    cta: 'Ver pesquisas',
+  },
+]
+
+const readingList = [
+  {
+    title: 'Violência contra a mulher baseada no gênero: revisão de escopo',
+    source: 'Ciência & Saúde Coletiva, 2025',
+    href: 'https://www.scielosp.org/article/csc/2025.v30n5/e02142025/',
+  },
+  {
+    title: 'Violência contra a mulher e adoecimento mental',
+    source: 'Physis - Revista de Saúde Coletiva',
+    href: 'https://www.scielo.br/j/physis/a/7CRjQTCrkX7RXrC7XFT3jDs/?lang=pt',
+  },
+  {
+    title: 'Guia prático de cuidado à mulher em situação de violência',
+    source: 'Ministério da Saúde, 2025',
+    href: 'https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais/2025/guia-pratico-de-cuidado-a-mulher-em-situacao-de-violencia.pdf',
+  },
+  {
+    title: 'Relatórios e estudos sobre violência em Santa Catarina',
+    source: 'Observatório da Violência Contra a Mulher - OVM/SC',
+    href: 'https://ovm.alesc.sc.gov.br/publicacoes/relatorios-ovm-sc/',
+  },
+]
+
 function QuickExitButton({ className = '' }) {
   function leavePage() {
     window.location.assign('https://www.google.com')
@@ -258,6 +370,7 @@ function QuickExitButton({ className = '' }) {
 
 function IconCard({ item }) {
   const Icon = item.icon
+  const isExternal = item.href?.startsWith('http')
 
   return (
     <article className={`info-card ${item.tone ? `tone-${item.tone}` : ''}`}>
@@ -267,9 +380,18 @@ function IconCard({ item }) {
       <h3>{item.title}</h3>
       <p>{item.text || item.detail}</p>
       {item.cta && (
-        <a className="card-link" href={item.href}>
+        <a
+          className="card-link"
+          href={item.href}
+          target={isExternal ? '_blank' : undefined}
+          rel={isExternal ? 'noreferrer' : undefined}
+        >
           {item.cta}
-          <ArrowRight size={17} aria-hidden="true" />
+          {isExternal ? (
+            <ExternalLink size={17} aria-hidden="true" />
+          ) : (
+            <ArrowRight size={17} aria-hidden="true" />
+          )}
         </a>
       )}
     </article>
@@ -504,6 +626,79 @@ function App() {
                   <span>{stat.source}</span>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="pesquisa" className="section research-section">
+          <div className="section-inner">
+            <SectionHeading
+              eyebrow="Base de pesquisa"
+              title="Caminhos para aprofundar o tema em sala de aula"
+              text="Esta área reúne trilhas de estudo e ambientes confiáveis para localizar artigos, relatórios, teses, dissertações e materiais técnicos."
+            />
+
+            <div className="study-grid">
+              {studyTopics.map((topic) => {
+                const Icon = topic.icon
+
+                return (
+                  <a className="study-card" href={topic.href} key={topic.title}>
+                    <Icon size={22} aria-hidden="true" />
+                    <strong>{topic.title}</strong>
+                    <p>{topic.text}</p>
+                  </a>
+                )
+              })}
+            </div>
+
+            <div className="research-layout">
+              <div>
+                <h3>Onde pesquisar</h3>
+                <div className="resource-grid">
+                  {researchHubs.map((hub) => {
+                    const Icon = hub.icon
+
+                    return (
+                      <a
+                        className="resource-card"
+                        href={hub.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        key={hub.title}
+                      >
+                        <span>
+                          <Icon size={21} aria-hidden="true" />
+                        </span>
+                        <strong>{hub.title}</strong>
+                        <p>{hub.text}</p>
+                        <em>
+                          {hub.cta}
+                          <ExternalLink size={15} aria-hidden="true" />
+                        </em>
+                      </a>
+                    )
+                  })}
+                </div>
+              </div>
+
+              <aside className="reading-panel">
+                <h3>Leituras para começar</h3>
+                <div className="reading-list">
+                  {readingList.map((reading) => (
+                    <a
+                      href={reading.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      key={reading.title}
+                    >
+                      <strong>{reading.title}</strong>
+                      <span>{reading.source}</span>
+                      <ExternalLink size={15} aria-hidden="true" />
+                    </a>
+                  ))}
+                </div>
+              </aside>
             </div>
           </div>
         </section>
